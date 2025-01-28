@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0DCBB6152D3139A600076775 /* SFSymbolsPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 0DCBB6142D3139A600076775 /* SFSymbolsPicker */; };
+		0DCBB5E02D30F9EE00076775 /* TaskManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCBB5DF2D30F9EE00076775 /* TaskManagerApp.swift */; };
+		0DCBB5E62D30F9EF00076775 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DCBB5E52D30F9EF00076775 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +30,28 @@
 
 /* Begin PBXFileReference section */
 		0DCBB5DC2D30F9EE00076775 /* TaskManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DCBB5DF2D30F9EE00076775 /* TaskManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManagerApp.swift; sourceTree = "<group>"; };
+		0DCBB5E52D30F9EF00076775 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DCBB5EE2D30F9EF00076775 /* TaskManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaskManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DCBB5F82D30F9F000076775 /* TaskManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaskManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		0DCBB6412D34E98200076775 /* Exceptions for "TaskManager" folder in "TaskManager" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 0DCBB5DB2D30F9EE00076775 /* TaskManager */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		0DCBB5DE2D30F9EE00076775 /* TaskManager */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				0DCBB6412D34E98200076775 /* Exceptions for "TaskManager" folder in "TaskManager" target */,
+			);
 			path = TaskManager;
 			sourceTree = "<group>";
 		};
@@ -56,7 +72,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DCBB6152D3139A600076775 /* SFSymbolsPicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				0DCBB5DE2D30F9EE00076775 /* TaskManager */,
+				0DCBB5E52D30F9EF00076775 /* Assets.xcassets */,
+				0DCBB5DF2D30F9EE00076775 /* TaskManagerApp.swift */,
 				0DCBB5F12D30F9EF00076775 /* TaskManagerTests */,
 				0DCBB5FB2D30F9F000076775 /* TaskManagerUITests */,
 				0DCBB5DD2D30F9EE00076775 /* Products */,
@@ -117,7 +134,6 @@
 			);
 			name = TaskManager;
 			packageProductDependencies = (
-				0DCBB6142D3139A600076775 /* SFSymbolsPicker */,
 			);
 			productName = TaskManager;
 			productReference = 0DCBB5DC2D30F9EE00076775 /* TaskManager.app */;
@@ -202,7 +218,6 @@
 			mainGroup = 0DCBB5D32D30F9EE00076775;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				0DCBB6132D3139A600076775 /* XCRemoteSwiftPackageReference "SFSymbolsPicker" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 0DCBB5DD2D30F9EE00076775 /* Products */;
@@ -221,6 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DCBB5E62D30F9EF00076775 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DCBB5E02D30F9EE00076775 /* TaskManagerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +354,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -393,6 +411,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -407,6 +426,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TaskManager/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TaskManager/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -420,7 +440,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = aditi.com.TaskManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -435,6 +455,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TaskManager/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TaskManager/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -448,7 +469,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = aditi.com.TaskManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -561,25 +582,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		0DCBB6132D3139A600076775 /* XCRemoteSwiftPackageReference "SFSymbolsPicker" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/alessiorubicini/SFSymbolsPicker";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.6;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		0DCBB6142D3139A600076775 /* SFSymbolsPicker */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 0DCBB6132D3139A600076775 /* XCRemoteSwiftPackageReference "SFSymbolsPicker" */;
-			productName = SFSymbolsPicker;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0DCBB5D42D30F9EE00076775 /* Project object */;
 }

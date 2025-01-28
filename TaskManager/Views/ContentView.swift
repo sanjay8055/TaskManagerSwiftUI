@@ -6,58 +6,32 @@
 //
 
 import SwiftUI
-import SwiftData
 
 struct ContentView: View {
+    @State private var sortOrder = SortDescriptor(\Item.title)
     @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
 
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.date, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        VStack(spacing: 15) {
-                            HStack {
-                                Text(item.title)
-                                    .fontWeight(.bold)
-                                Spacer()
-                                Image(systemName: item.icon)
-                            }
-                            HStack {
-                                Text("Priority: \(item.priority)")
-                                    .fontWeight(.light)
-                                Spacer()
-                                Text(item.date, format: Date.FormatStyle(date: .abbreviated))
-                                    .fontWeight(.light)
-                            }
-                        }
+        NavigationStack {
+            HomeView(viewModel: HomeViewModel(modelContext: modelContext, sortOrder: sortOrder))
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        menuPicker
                     }
                 }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    NavigationLink(destination: AddTaskView()) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-        } detail: {
-            Text("Select an item")
+                .navigationTitle("Tasks List")
         }
     }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
+    
+    var menuPicker: some View {
+        Menu("Sort", systemImage: "arrow.up.arrow.down") {
+            Picker("Sort", selection: $sortOrder) {
+                Text("Name")
+                    .tag(SortDescriptor(\Item.title))
+                Text("Date")
+                    .tag(SortDescriptor(\Item.date))
             }
+            .pickerStyle(.inline)
         }
     }
 }

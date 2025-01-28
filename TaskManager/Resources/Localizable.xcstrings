@@ -1,0 +1,72 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@" : {
+
+    },
+    "Add New Task" : {
+      "extractionState" : "manual"
+    },
+    "Create" : {
+      "extractionState" : "manual"
+    },
+    "Date" : {
+
+    },
+    "Delete" : {
+
+    },
+    "Description" : {
+
+    },
+    "Due %@" : {
+
+    },
+    "Due Date" : {
+      "extractionState" : "manual"
+    },
+    "Edit" : {
+
+    },
+    "Enter a valid title" : {
+      "extractionState" : "manual"
+    },
+    "Enter comma separated values" : {
+      "extractionState" : "manual"
+    },
+    "Enter Task description" : {
+      "extractionState" : "manual"
+    },
+    "Enter Task Title" : {
+      "extractionState" : "manual"
+    },
+    "Name" : {
+
+    },
+    "New Task" : {
+      "extractionState" : "manual"
+    },
+    "Priority" : {
+      "extractionState" : "manual"
+    },
+    "Sort" : {
+
+    },
+    "Tags" : {
+      "extractionState" : "manual"
+    },
+    "Task Description" : {
+      "extractionState" : "manual"
+    },
+    "Task Details" : {
+
+    },
+    "Task Title" : {
+      "extractionState" : "manual"
+    },
+    "Tasks List" : {
+
+    }
+  },
+  "version" : "1.0"
+}
